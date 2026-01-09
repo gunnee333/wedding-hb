@@ -39,7 +39,7 @@ function App() {
 
       <section className="section">
         <h2 className="sectionTitle">갤러리</h2>
-        <PhotoGallery photos={inviteData.photos} />
+        <PhotoGallery />
       </section>
 
       <section className="section">

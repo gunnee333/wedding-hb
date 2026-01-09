@@ -1,9 +1,23 @@
 import { useMemo, useState } from 'react';
 import { ImageModal } from './ImageModal';
+import * as Images from '../assets/images';
 
-type Props = { photos: string[] };
+const photos: string[] = [
+  Images.photo1,
+  Images.photo2,
+  Images.photo3,
+  Images.photo4,
+  Images.photo5,
+  Images.photo6,
+  Images.photo7,
+  Images.photo8,
+  Images.photo9,
+  Images.photo10,
+  Images.photo11,
+  Images.photo12
+];
 
-export function PhotoGallery({ photos }: Props) {
+export function PhotoGallery() {
   const items = useMemo(() => photos.filter(Boolean), [photos]);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
