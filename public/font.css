@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'MinionPro';
-  src: url('/fonts/MinionPro-Disp.otf') format('opentype');
+  src: url('./fonts/MinionPro-Disp.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JuliusSansOne';
-  src: url('/fonts/JuliusSansOne-Regular.ttf') format('opentype');
+  src: url('./fonts/JuliusSansOne-Regular.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GowunDodum';
-  src: url('/fonts/GowunDodum-Regular.ttf') format('opentype');
+  src: url('./fonts/GowunDodum-Regular.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CormorantInfant';
-  src: url('/fonts/CormorantInfant-VariableFont_wght.ttf') format('opentype');
+  src: url('./fonts/CormorantInfant-VariableFont_wght.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
