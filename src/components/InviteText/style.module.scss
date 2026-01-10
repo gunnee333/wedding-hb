@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  text-align: center;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .title {
+    font-family: 'JuliusSansOne';
+    font-size: 12.8px;
+    color: var(--point-color);
+  }
+
+  .subTitle {
+    font-family: 'GowunDodum';
+    font-size: 16px;
+  }
+
+  .names {
+    font-family: 'GowunDodum';
+    font-size: 16px;
+  }
+
+  button {
+    font-family: 'GowunDodum';
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    min-width: 200px;
+  }
+}
+
+.modal {
+  font-family: 'GowunDodum';
+  background-color: white;
+  padding: 25px 25px 24px;
+  border-radius: 10px;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 0;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-size: 16px;
+      }
+      .name {
+        font-weight: 600;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        svg {
+          width: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

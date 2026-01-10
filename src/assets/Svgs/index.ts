@@ -1,0 +1,10 @@
+export { default as tel } from './Tel';
+export { default as sms } from './Sms';
+export { default as waves } from './Waves';
+export { default as division } from './Division';
+export { default as copy } from './Copy';
+export { default as arrow } from './Arrow';
+export { default as car } from './Car';
+export { default as parking } from './Parking';
+export { default as subway } from './Subway';
+export { default as close } from './Close';
