@@ -55,15 +55,14 @@
         transition: transform 0.3s;
       }
     }
-    > div:nth-child(2) {
-      max-height: 1000000px;
+    .toggleDiv {
+      max-height: 30svh;
       overflow: hidden;
       transition: all 0.5s;
     }
     &:not(.active) {
-      > div:nth-child(2) {
-        height: 0;
-        max-height: 0;
+      .toggleDiv {
+        max-height: 0px;
       }
     }
 
@@ -101,6 +100,7 @@
           border-radius: 4px;
           padding: 4px 6px;
           gap: 6px;
+          font-size: 10px;
 
           svg {
             width: 16px;

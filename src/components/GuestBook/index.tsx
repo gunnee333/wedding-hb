@@ -13,6 +13,7 @@ import {
 import { db } from '../../lib/firebase';
 import styles from './style.module.scss';
 import { Svgs } from '../../assets';
+import { inviteData } from '../../data/data';
 
 type CommentDoc = {
   id: string;
@@ -33,7 +34,7 @@ function formatDate(ts: any) {
   const hh = String(d.getHours()).padStart(2, '0');
   const min = String(d.getMinutes()).padStart(2, '0');
 
-  return `${yyyy}.${mm}.${dd} ${hh}:${min}`;
+  return `${yyyy}.${mm}.${dd}`;
 }
 
 export default function Component() {
@@ -127,8 +128,8 @@ export default function Component() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>GUEST BOOT</div>
+    <div className={styles.container} id={inviteData.elementId.guestbook}>
+      <div className={styles.title}>GUEST BOOK</div>
       <div className={styles.subTitle}>방명록</div>
       <div className={styles.division} />
       <div className={styles.commentsDesc}>
@@ -136,30 +137,55 @@ export default function Component() {
         <p>소중한 추억으로 간직하겠습니다.</p>
       </div>
       <form className={styles.commentForm} onSubmit={onSubmit}>
-        <input
-          className={styles.input}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="이름"
-          maxLength={20}
-        />
+        <div className={styles.line}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={styles.row}>
+          <div>
+            <span>이름</span>
+          </div>
+          <input
+            className={styles.input}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="이름을 입력해주세요."
+            maxLength={20}
+          />
+        </div>
 
-        <textarea
-          className={styles.textarea}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="축하 메시지를 남겨주세요 (최대 300자)"
-          maxLength={300}
-        />
+        <div className={styles.row}>
+          <div>
+            <span>내용</span>
+          </div>
+          <section>
+            <textarea
+              className={styles.textarea}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="축하 메시지를 남겨주세요. (최대 300자)"
+              maxLength={300}
+            />
+          </section>
+        </div>
 
-        <input
-          className={styles.input}
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="삭제용 비밀번호 (4자 이상)"
-          maxLength={30}
-        />
+        <div className={styles.row}>
+          <div>
+            <span>비밀번호</span>
+          </div>
+          <input
+            className={styles.input}
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="삭제용 비밀번호 (4자 이상)"
+            maxLength={30}
+          />
+        </div>
 
         {error && <div className={styles.errorText}>{error}</div>}
 
@@ -168,7 +194,7 @@ export default function Component() {
           type="submit"
           disabled={submitting}
         >
-          {submitting ? '등록 중...' : '댓글 등록'}
+          {submitting ? '작성 중...' : '글쓰기'}
         </button>
       </form>
 

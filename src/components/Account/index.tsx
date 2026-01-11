@@ -64,7 +64,7 @@ export default function Component() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id={inviteData.elementId.account}>
         <div className={styles.title}>ACCOUNT</div>
         <div className={styles.subTitle}>마음 전하실 곳</div>
         <div className={styles.division} />
@@ -90,7 +90,7 @@ export default function Component() {
             <span>신랑측</span>
             <Svgs.arrow />
           </div>
-          <div>
+          <div className={styles.toggleDiv}>
             {list1
               .filter((item) => !!item.account && !!item.bank)
               .map((item) => (
@@ -109,7 +109,7 @@ export default function Component() {
             <span>신부측</span>
             <Svgs.arrow />
           </div>
-          <div>
+          <div className={styles.toggleDiv}>
             {list2
               .filter((item) => !!item.account && !!item.bank)
               .map((item) => (

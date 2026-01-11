@@ -41,7 +41,7 @@
           }
           > p {
             position: absolute;
-            bottom: -20px;
+            bottom: -10px;
             width: 100%;
             color: var(--point-color);
             z-index: 2;
@@ -55,18 +55,18 @@
             &::after {
               border-radius: 50px 50px 10px 10px;
               content: '';
-              height: 80%;
-              left: 50%;
+              height: 85%;
+              left: 49%;
               position: absolute;
-              top: 10%;
+              top: 9%;
               transform: rotate(-45deg);
               transform-origin: 0 100%;
-              width: 30%;
+              width: 38%;
               background-color: var(--point-color);
             }
 
             &::after {
-              left: 20%;
+              left: 13%;
               transform: rotate(45deg);
               transform-origin: 100% 100%;
             }
@@ -94,7 +94,7 @@
       border-radius: 8px;
       border: 1px solid #f2eeee;
       background-color: #faf8f8;
-      min-width: 30px;
+      min-width: 50px;
 
       > span {
         font-size: 10px;

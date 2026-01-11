@@ -12,7 +12,10 @@ export const inviteData = {
     address: '경기 부천시 원미구 길주로 105',
     hallname: '라비에벨웨딩 9층 오페라홀',
     tel: '032-325-2000',
-    copyAdress: '경기 부천시 원미구 길주로 105 라비에벨웨딩 9층 오페라홀'
+    copyAdress: '경기 부천시 원미구 길주로 105 라비에벨웨딩 9층 오페라홀',
+    naver: 'https://map.naver.com/p/entry/place/12945535?c=17.00,0,0,0,dh',
+    kakao:
+      'https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=%2C%2C445647%2C1113106&rt1=&rt2=%EC%83%81%EB%8F%99+%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8+9%EC%B8%B5+%EC%98%A4%ED%8E%98%EB%9D%BC%ED%99%80&rtIds=%2C&rtTypes=%2C'
   },
   message: {
     message: '서로의 손을 잡고<br/>평생을 함께 걷겠습니다.'
@@ -56,5 +59,15 @@ export const inviteData = {
   },
   location: {
     address: '경기도 부천시 상동 라비에벨'
+  },
+  link: 'https://gunnee333.github.io/wedding-hb',
+  elementId: {
+    account: 'account',
+    calendar: 'calendar',
+    gallery: 'gallery',
+    guestbook: 'guestbook',
+    header: 'header',
+    inviteText: 'inviteText',
+    location: 'location'
   }
 };

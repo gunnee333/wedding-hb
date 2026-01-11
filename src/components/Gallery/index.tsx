@@ -1,29 +1,30 @@
 import { useState } from 'react';
-import { Images } from '../../assets';
+import { Svgs, Wedding } from '../../assets';
 import styles from './style.module.scss';
 import { ImageModal } from '../Modal/ImageModal';
+import { inviteData } from '../../data/data';
 
 const images: string[] = [
-  Images.photo1,
-  Images.photo2,
-  Images.photo3,
-  Images.photo4,
-  Images.photo5,
-  Images.photo6,
-  Images.photo7,
-  Images.photo8,
-  Images.photo9,
-  Images.photo10,
-  Images.photo11,
-  Images.photo12,
-  Images.photo13,
-  Images.photo14,
-  Images.photo15,
-  Images.photo16,
-  Images.photo17,
-  Images.photo18,
-  Images.photo19,
-  Images.photo20
+  Wedding.photo1,
+  Wedding.photo2,
+  Wedding.photo3,
+  Wedding.photo4,
+  Wedding.photo5,
+  Wedding.photo6,
+  Wedding.photo7,
+  Wedding.photo8,
+  Wedding.photo9,
+  Wedding.photo10,
+  Wedding.photo11,
+  Wedding.photo12,
+  Wedding.photo13,
+  Wedding.photo14,
+  Wedding.photo15,
+  Wedding.photo16,
+  Wedding.photo17,
+  Wedding.photo18,
+  Wedding.photo19,
+  Wedding.photo20
 ];
 
 const section1: { url: string; index: number }[] = [];
@@ -31,8 +32,10 @@ const section2: { url: string; index: number }[] = [];
 const section3: { url: string; index: number }[] = [];
 const section4: { url: string; index: number }[] = [];
 
+const rowCnt = Math.floor(images.length / 4);
+
 images.forEach((item, index) => {
-  const div = index % 4;
+  const div = Math.floor(index / rowCnt);
   switch (div) {
     case 0:
       section1.push({ url: item, index });
@@ -54,7 +57,7 @@ export default function Component() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id={inviteData.elementId.gallery}>
         <div className={styles.title}>GALLERY</div>
         <div className={styles.listContainer}>
           <div className={styles.list}>
@@ -104,6 +107,7 @@ export default function Component() {
             </div>
           </div>
         </div>
+        <Svgs.division fill="#fdfafa" />
       </div>
       {openIndex !== null && (
         <ImageModal

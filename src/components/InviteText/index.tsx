@@ -13,7 +13,7 @@ const telNumList: { title: string; name: string; tel: string }[] = [
   {
     title: '신부',
     name: inviteData.wedding.bride,
-    tel: inviteData.wedding.groomPhone
+    tel: inviteData.wedding.bridePhone
   },
   {
     title: '신랑 아버지',
@@ -42,7 +42,7 @@ export default function Component() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id={inviteData.elementId.inviteText}>
         <div className={styles.title}>INVITE YOU</div>
         <div className={styles.subTitle}>
           <p>저희 두 사람이</p>

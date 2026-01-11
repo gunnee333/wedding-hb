@@ -25,5 +25,128 @@
     font-family: 'GowunDodum';
     text-align: center;
     line-height: 180%;
+
+    .copyBtn {
+      margin-top: 4px;
+
+      button {
+        background-color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--page-background-color2);
+      }
+    }
+  }
+
+  .map {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+
+    > div {
+      width: 100% !important;
+    }
+
+    :global(.hide),
+    :global(.address),
+    :global(.section_address),
+    :global(.phone) {
+      display: none;
+    }
+
+    .link {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      gap: 8px;
+      background-color: white;
+      border: 1px solid #f9f5f5;
+      border-radius: 4px;
+      padding: 10px 6px;
+      font-family: 'GowunDodum';
+
+      > div {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+
+        img {
+          width: 20px;
+        }
+      }
+
+      .div {
+        flex: none;
+        width: 1px;
+        height: 12px;
+        background-color: #f9f5f5;
+      }
+    }
+    .mapImg {
+      border-radius: 4px;
+      border: 1px solid #f9f5f5;
+    }
+  }
+
+  .load {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'GowunDodum';
+    gap: 30px;
+
+    .loadItem {
+      display: flex;
+      flex-direction: column;
+
+      .loadTitle {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        border-bottom: 1px dashed var(--point-color);
+        font-size: 20px;
+        padding-bottom: 8px;
+        font-weight: 700;
+
+        > div {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 1px solid var(--point-color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+
+          svg {
+            width: 24px;
+          }
+        }
+      }
+
+      .loadTxt {
+        padding: 10px 0;
+        display: flex;
+
+        * {
+          line-height: 150%;
+          vertical-align: bottom;
+        }
+
+        ul > li {
+          margin-bottom: 4px;
+          word-break: keep-all;
+          color: rgb(85, 85, 85);
+        }
+      }
+    }
   }
 }

@@ -6,6 +6,7 @@
   justify-content: center;
   width: 100vw;
   min-height: 100vh;
+  position: relative;
 
   .layout {
     display: flex;
@@ -19,6 +20,7 @@
       flex-direction: column;
       height: 100%;
       overflow-x: hidden;
+      padding-bottom: var(--menu-height);
     }
   }
 }

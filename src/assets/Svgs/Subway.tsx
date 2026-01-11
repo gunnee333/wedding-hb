@@ -36,7 +36,7 @@ export default function Svg() {
         <path
           d="M0.5 17.5V8.5C0.5 4.08172 4.08172 0.5 8.5 0.5H9.5C13.9183 0.5 17.5 4.08172 17.5 8.5V17.5"
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         ></path>{' '}
         <line
           y1="-0.5"

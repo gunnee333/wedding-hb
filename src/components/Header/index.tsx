@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 
 export default function Component() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={inviteData.elementId.header}>
       <img src={Images.main_img} alt="" />
       <div className={styles.names}>
         <span>{inviteData.wedding.groomEn}</span>

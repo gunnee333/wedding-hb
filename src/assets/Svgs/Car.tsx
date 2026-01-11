@@ -27,7 +27,7 @@ export default function Svg() {
           d="M14 11C14.5523 11 15 10.5523 15 10C15 9.44772 14.5523 9 14 9C13.4477 9 13 9.44772 13 10C13 10.5523 13.4477 11 14 11Z"
           fill="currentColor"
         ></path>{' '}
-        <path d="M16 7.5H2" stroke="currentColor" stroke-miterlimit="10"></path>{' '}
+        <path d="M16 7.5H2" stroke="currentColor" strokeMiterlimit="10"></path>{' '}
         <path d="M18 7H15L16 9H18V7Z" fill="currentColor"></path>{' '}
         <path d="M3 7H0V9H2L3 7Z" fill="currentColor"></path>{' '}
         <path

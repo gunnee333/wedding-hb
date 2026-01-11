@@ -1,2 +1,116 @@
-.container {
+.wrapper {
+  width: var(--page-width);
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30%;
+    background-color: white;
+    border-top: 1px solid #eee;
+    height: var(--menu-height);
+    width: var(--page-width);
+
+    > div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 24px;
+      }
+    }
+
+    > p {
+      height: 8px;
+      width: 1px;
+      background-color: #eee;
+    }
+  }
+}
+
+.shareModal {
+  font-family: 'GowunDodum';
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    width: var(--page-width);
+    padding: 40px;
+
+    .item {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      gap: 8px;
+
+      > div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+
+        svg {
+          width: 24px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .btn {
+    button {
+      width: 100%;
+      height: 58px;
+      background-color: #eee;
+      border-top: 1px solid #ccc;
+    }
+  }
+}
+
+.menuOpen {
+  position: fixed;
+  bottom: -100svh;
+  left: 0;
+  right: 0;
+  transition: bottom 0.5s;
+  background-color: #ffffffcc;
+  width: var(--page-width);
+  margin: auto;
+  padding: 20px 0 var(--menu-height);
+  z-index: 999999998;
+
+  &.active {
+    bottom: 0svh;
+  }
+
+  .menuItem {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+  }
 }

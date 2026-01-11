@@ -22,8 +22,9 @@ export default function App() {
           <Location />
           <Account />
           <GuestBook />
+          <div className={styles.bottom}></div>
+          <Menu />
         </div>
-        <Menu />
       </div>
     </div>
   );

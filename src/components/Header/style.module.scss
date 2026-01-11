@@ -40,13 +40,14 @@
     gap: 20px;
 
     .married {
-      font-family: 'Bastian Script', sans-serif;
+      font-family: 'Broadcast', sans-serif;
       color: white;
       font-size: 70px;
       rotate: -10deg;
       padding-bottom: 20px;
       text-align: left;
       padding-left: 70px;
+      white-space: nowrap;
     }
     .date {
       font-family: 'MinionPro';

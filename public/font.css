@@ -25,3 +25,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Broadcast';
+  src: url('./fonts/Broadcast_Matter.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
