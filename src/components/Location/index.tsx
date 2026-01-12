@@ -23,6 +23,22 @@ function kakaoMapLoad() {
   }
 }
 
+function tmapLoad() {
+  // 티맵 (앱 스킴 + 안내 페이지)
+  const schemeUrl = `tmap://route?goalx=${inviteData.location.lng}&goaly=${
+    inviteData.location.lat
+  }&goalname=${encodeURIComponent(inviteData.place.hallname)}`;
+  const fallbackUrl = `https://www.tmap.co.kr/tmap2/mobile/main.do`;
+
+  const start = Date.now();
+  window.location.href = schemeUrl;
+
+  window.setTimeout(() => {
+    // 스킴이 막히거나 앱 미설치면 대체 링크로
+    if (Date.now() - start < 1500) window.location.href = fallbackUrl;
+  }, 800);
+}
+
 async function copyText(text: string) {
   await window.navigator?.clipboard?.writeText(text);
   alert('주소복사 완료');
@@ -71,6 +87,11 @@ export default function Component() {
           <div onClick={() => window.open(inviteData.place.kakao)}>
             <img src={Images.kakaoNav} />
             <span>카카오내비</span>
+          </div>
+          <div className={styles.div} />
+          <div onClick={tmapLoad}>
+            <img src={Images.tmap} />
+            <span>티맵</span>
           </div>
         </div>
         <img src={Images.map} className={styles.mapImg} />

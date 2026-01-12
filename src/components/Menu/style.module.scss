@@ -114,3 +114,32 @@
     cursor: pointer;
   }
 }
+
+.qrModal {
+  font-family: 'GowunDodum';
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 100;
+  max-width: 80%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      width: 50%;
+    }
+  }
+  .btn {
+    button {
+      width: 100%;
+      height: 58px;
+      background-color: #eee;
+      border-top: 1px solid #ccc;
+    }
+  }
+}

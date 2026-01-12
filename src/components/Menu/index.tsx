@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Svgs } from '../../assets';
+import { Images, Svgs } from '../../assets';
 import styles from './style.module.scss';
 import Modal from '../Modal';
 import { inviteData } from '../../data/data';
@@ -24,6 +24,7 @@ async function copyText(text: string) {
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const [isQrOpen, setIsQrOpen] = useState(false);
 
   function scrollToId(id: string) {
     setIsMenuOpen(false);
@@ -37,10 +38,6 @@ export default function Component() {
     <>
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <div onClick={() => {}}>
-            <Svgs.sound />
-          </div>
-          <p />
           <div onClick={() => setIsMenuOpen((prev) => !prev)}>
             <Svgs.menu />
           </div>
@@ -92,7 +89,7 @@ export default function Component() {
             </div>
             <div>URL 복사</div>
           </div>
-          <div className={styles.item}>
+          <div className={styles.item} onClick={() => setIsQrOpen(true)}>
             <div>
               <Svgs.qrcode />
             </div>
@@ -101,6 +98,20 @@ export default function Component() {
         </div>
         <div className={styles.btn}>
           <button onClick={() => setIsShareOpen(false)}>닫기</button>
+        </div>
+      </Modal>
+      <Modal
+        visible={isQrOpen}
+        isCenter={true}
+        contentClassName={styles.qrModal}
+        toWay="none"
+        close={() => setIsQrOpen(false)}
+      >
+        <div className={styles.container}>
+          <img src={Images.inviteQr} />
+        </div>
+        <div className={styles.btn}>
+          <button onClick={() => setIsQrOpen(false)}>닫기</button>
         </div>
       </Modal>
     </>

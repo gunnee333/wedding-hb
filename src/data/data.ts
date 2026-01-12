@@ -58,7 +58,9 @@ export const inviteData = {
     brideSide: '신부측 계좌'
   },
   location: {
-    address: '경기도 부천시 상동 라비에벨'
+    address: '경기도 부천시 상동 라비에벨',
+    lat: 37.50634759752773,
+    lng: 126.75423564403523
   },
   link: 'https://gunnee333.github.io/wedding-hb',
   elementId: {
