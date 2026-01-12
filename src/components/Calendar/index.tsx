@@ -2,8 +2,12 @@ import { useEffect, useMemo, useState } from 'react';
 import { Svgs } from '../../assets';
 import styles from './style.module.scss';
 import { inviteData } from '../../data/data';
+import moment from 'moment';
 
 function diffParts(targetMs: number, nowMs: number) {
+  const diffDays = moment(targetMs)
+    .startOf('days')
+    .diff(moment(nowMs).startOf('days'), 'days');
   const diff = targetMs - nowMs;
   const abs = Math.abs(diff);
 
@@ -13,7 +17,7 @@ function diffParts(targetMs: number, nowMs: number) {
   const mins = Math.floor((totalSec % 3600) / 60);
   const secs = totalSec % 60;
 
-  return { diff, days, hours, mins, secs };
+  return { diffDays, diff, days, hours, mins, secs };
 }
 
 export default function Component() {
@@ -29,7 +33,7 @@ export default function Component() {
   }, []);
 
   const d = diffParts(targetMs, nowMs);
-  const isBefore = d.days >= 0;
+  const isBefore = d.diffDays > 0;
 
   return (
     <>
@@ -99,38 +103,42 @@ export default function Component() {
             </tr>
           </tbody>
         </table>
-        <div className={styles.timer}>
-          <div>
-            {String(d.days).padStart(2, '0')}
-            <span>Days</span>
+        {d.diff > 0 && (
+          <div className={styles.timer}>
+            <div>
+              {String(d.days).padStart(2, '0')}
+              <span>Days</span>
+            </div>
+            :
+            <div>
+              {String(d.hours).padStart(2, '0')}
+              <span>Hours</span>
+            </div>
+            :
+            <div>
+              {String(d.mins).padStart(2, '0')}
+              <span>Min</span>
+            </div>
+            :
+            <div>
+              {String(d.secs).padStart(2, '0')}
+              <span>Sec</span>
+            </div>
           </div>
-          :
-          <div>
-            {String(d.hours).padStart(2, '0')}
-            <span>Hours</span>
-          </div>
-          :
-          <div>
-            {String(d.mins).padStart(2, '0')}
-            <span>Min</span>
-          </div>
-          :
-          <div>
-            {String(d.secs).padStart(2, '0')}
-            <span>Sec</span>
-          </div>
-        </div>
+        )}
         {d.days === 0 ? (
           <div className={styles.desc}>
-            오늘은 {inviteData.wedding.groom.slice(1, 3)} <span>♥</span>{' '}
-            {inviteData.wedding.bride.slice(1, 3)}의 결혼식 <span>당일</span>
+            오늘은 {inviteData.wedding.groomData.name.slice(1, 3)}{' '}
+            <span>♥</span> {inviteData.wedding.brideData.name.slice(1, 3)}의
+            결혼식 <span>당일</span>
             입니다.
           </div>
         ) : (
           <div className={styles.desc}>
-            {inviteData.wedding.groom.slice(1, 3)} <span>♥</span>{' '}
-            {inviteData.wedding.bride.slice(1, 3)}의 결혼식이{' '}
-            <span>{d.days}</span>일 {isBefore ? '남았습니다.' : '지났습니다.'}
+            {inviteData.wedding.groomData.name.slice(1, 3)} <span>♥</span>{' '}
+            {inviteData.wedding.brideData.name.slice(1, 3)}의 결혼식이{' '}
+            <span>{Math.abs(d.diffDays)}</span>일{' '}
+            {isBefore ? '남았습니다.' : '지났습니다.'}
           </div>
         )}
       </div>

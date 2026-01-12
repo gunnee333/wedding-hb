@@ -7,8 +7,8 @@ export default function Component() {
     <div className={styles.container} id={inviteData.elementId.header}>
       <img src={Images.main_img} alt="" />
       <div className={styles.names}>
-        <span>{inviteData.wedding.groomEn}</span>
-        <span>{inviteData.wedding.brideEn}</span>
+        <span>{inviteData.wedding.groomData.nameEn}</span>
+        <span>{inviteData.wedding.brideData.nameEn}</span>
       </div>
       <div className={styles.txtContainer}>
         <div className={styles.married}>

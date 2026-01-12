@@ -13,7 +13,7 @@ interface IItem {
 const list1: IItem[] = [
   {
     title: '신랑',
-    name: inviteData.wedding.groom,
+    name: inviteData.wedding.groomData.name,
     bank: inviteData.wedding.groomData.bank,
     account: inviteData.wedding.groomData.account,
     kakaoPay: inviteData.wedding.groomData.kakaoPay
@@ -34,7 +34,7 @@ const list1: IItem[] = [
 const list2: IItem[] = [
   {
     title: '신부',
-    name: inviteData.wedding.bride,
+    name: inviteData.wedding.brideData.name,
     bank: inviteData.wedding.brideData.bank,
     account: inviteData.wedding.brideData.account,
     kakaoPay: inviteData.wedding.brideData.kakaoPay

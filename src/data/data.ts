@@ -1,8 +1,4 @@
 export const inviteData = {
-  hero: {
-    title: '권순성 ❤️ 이혜빈',
-    subtitle: '결혼합니다'
-  },
   date: {
     en: 'March 08, 2026',
     dateISO: '2026-03-08T12:00:00+09:00',
@@ -12,28 +8,29 @@ export const inviteData = {
     address: '경기 부천시 원미구 길주로 105',
     hallname: '라비에벨웨딩 9층 오페라홀',
     tel: '032-325-2000',
-    copyAdress: '경기 부천시 원미구 길주로 105 라비에벨웨딩 9층 오페라홀',
     naver: 'https://map.naver.com/p/entry/place/12945535?c=17.00,0,0,0,dh',
     kakao:
-      'https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=%2C%2C445647%2C1113106&rt1=&rt2=%EC%83%81%EB%8F%99+%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8+9%EC%B8%B5+%EC%98%A4%ED%8E%98%EB%9D%BC%ED%99%80&rtIds=%2C&rtTypes=%2C'
-  },
-  message: {
-    message: '서로의 손을 잡고<br/>평생을 함께 걷겠습니다.'
+      'https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=%2C%2C445647%2C1113106&rt1=&rt2=%EC%83%81%EB%8F%99+%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8+9%EC%B8%B5+%EC%98%A4%ED%8E%98%EB%9D%BC%ED%99%80&rtIds=%2C&rtTypes=%2C',
+    lat: 37.50634759752773,
+    lng: 126.75423564403523
   },
   wedding: {
-    groom: '권순성',
-    groomEn: 'KWON SOON SUNG',
-    groomPhone: '01062077029',
-    groomData: { account: '3521260744653', bank: '농협', kakaoPay: '' },
+    groomData: {
+      name: '권순성',
+      nameEn: 'KWON SOON SUNG',
+      phone: '01062077029',
+      account: '3521260744653',
+      bank: '농협',
+      kakaoPay: ''
+    },
     groomParents: [
       { name: '권혁규', phone: '01033577819', account: '', bank: '' },
       { name: '김기자', phone: '01071447819', account: '', bank: '' }
     ],
-
-    bride: '이혜빈',
-    brideEn: 'LEE HYE BIN',
-    bridePhone: '01026203241',
     brideData: {
+      name: '이혜빈',
+      nameEn: 'LEE HYE BIN',
+      phone: '01026203241',
       account: '28770204123755',
       bank: '국민',
       kakaoPay: 'https://qr.kakaopay.com/FXEfCbX44'
@@ -52,15 +49,6 @@ export const inviteData = {
         bank: '농협'
       }
     ]
-  },
-  accounts: {
-    groomSide: '신랑측 계좌',
-    brideSide: '신부측 계좌'
-  },
-  location: {
-    address: '경기도 부천시 상동 라비에벨',
-    lat: 37.50634759752773,
-    lng: 126.75423564403523
   },
   link: 'https://gunnee333.github.io/wedding-hb',
   elementId: {

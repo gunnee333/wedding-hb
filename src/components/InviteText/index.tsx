@@ -7,13 +7,13 @@ import { Svgs } from '../../assets';
 const telNumList: { title: string; name: string; tel: string }[] = [
   {
     title: '신랑',
-    name: inviteData.wedding.groom,
-    tel: inviteData.wedding.groomPhone
+    name: inviteData.wedding.groomData.name,
+    tel: inviteData.wedding.groomData.phone
   },
   {
     title: '신부',
-    name: inviteData.wedding.bride,
-    tel: inviteData.wedding.bridePhone
+    name: inviteData.wedding.brideData.name,
+    tel: inviteData.wedding.brideData.phone
   },
   {
     title: '신랑 아버지',
@@ -65,14 +65,14 @@ export default function Component() {
               {inviteData.wedding.groomParents[0].name} ·{' '}
               {inviteData.wedding.groomParents[1].name}
             </b>
-            의 장남 <b>{inviteData.wedding.groom.slice(1, 3)}</b>
+            의 장남 <b>{inviteData.wedding.groomData.name.slice(1, 3)}</b>
           </p>
           <p>
             <b>
               {inviteData.wedding.brideParents[0].name} ·{' '}
               {inviteData.wedding.brideParents[1].name}
             </b>
-            의 차녀 <b>{inviteData.wedding.bride.slice(1, 3)}</b>
+            의 차녀 <b>{inviteData.wedding.brideData.name.slice(1, 3)}</b>
           </p>
         </div>
         <div>

@@ -25,8 +25,8 @@ function kakaoMapLoad() {
 
 function tmapLoad() {
   // 티맵 (앱 스킴 + 안내 페이지)
-  const schemeUrl = `tmap://route?goalx=${inviteData.location.lng}&goaly=${
-    inviteData.location.lat
+  const schemeUrl = `tmap://route?goalx=${inviteData.place.lng}&goaly=${
+    inviteData.place.lat
   }&goalname=${encodeURIComponent(inviteData.place.hallname)}`;
   const fallbackUrl = `https://www.tmap.co.kr/tmap2/mobile/main.do`;
 
