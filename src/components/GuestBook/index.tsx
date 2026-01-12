@@ -49,9 +49,6 @@ export default function Component() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string>();
 
-  console.log('submitting', submitting);
-  console.log('error', error);
-
   const colRef = useMemo(() => collection(db, 'comments'), []);
 
   useEffect(() => {
@@ -59,17 +56,19 @@ export default function Component() {
     const unsub = onSnapshot(
       q,
       (snap) => {
-        const next = snap.docs.map((d) => {
-          const data = d.data() as any;
-          return {
-            id: d.id,
-            name: String(data.name ?? ''),
-            message: String(data.message ?? ''),
-            pwHash: String(data.pwHash ?? ''),
-            deleted: Boolean(data.deleted ?? false),
-            createdAt: data.createdAt
-          };
-        });
+        const next = snap.docs
+          .map((d) => {
+            const data = d.data() as any;
+            return {
+              id: d.id,
+              name: String(data.name ?? ''),
+              message: String(data.message ?? ''),
+              pwHash: String(data.pwHash ?? ''),
+              deleted: Boolean(data.deleted ?? false),
+              createdAt: data.createdAt
+            };
+          })
+          .filter((item) => !item.deleted);
         setItems(next);
       },
       (e) => setError(e.message)
