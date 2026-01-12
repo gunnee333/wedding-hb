@@ -1,5 +1,5 @@
 .wrapper {
-  width: var(--page-width);
+  width: var(--view-width);
   margin: auto;
   position: fixed;
   bottom: 0;
@@ -19,7 +19,7 @@
     background-color: white;
     border-top: 1px solid #eee;
     height: var(--menu-height);
-    width: var(--page-width);
+    width: var(--view-width);
 
     > div {
       cursor: pointer;
@@ -51,7 +51,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px 0;
-    width: var(--page-width);
+    width: var(--view-width);
     padding: 40px;
 
     .item {
@@ -98,7 +98,7 @@
   right: 0;
   transition: bottom 0.5s;
   background-color: #ffffffcc;
-  width: var(--page-width);
+  width: var(--view-width);
   margin: auto;
   padding: 20px 0 var(--menu-height);
   z-index: 999999998;

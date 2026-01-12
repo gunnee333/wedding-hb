@@ -24,7 +24,7 @@ function kakaoMapLoad() {
 }
 
 async function copyText(text: string) {
-  await navigator.clipboard.writeText(text);
+  await window.navigator?.clipboard?.writeText(text);
   alert('주소복사 완료');
 }
 

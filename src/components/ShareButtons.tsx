@@ -76,7 +76,7 @@ export function ShareButtons({ title, description, imageUrl, url }: Props) {
   };
 
   const copyLink = async () => {
-    await navigator.clipboard.writeText(url);
+    await window.navigator?.clipboard?.writeText(url);
     alert('링크를 복사했습니다.');
   };
 

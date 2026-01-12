@@ -32,3 +32,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'LoveLight';
+  src: url('./fonts/LoveLight-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Painting';
+  src: url('./fonts/Painting_With_Chocolate.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

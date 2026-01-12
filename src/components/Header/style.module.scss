@@ -15,13 +15,13 @@
   }
 
   .names {
+    font-family: 'MinionPro';
     position: absolute;
     top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'MinionPro';
 
     > span {
       padding: 20px;
@@ -40,14 +40,18 @@
     gap: 20px;
 
     .married {
-      font-family: 'Broadcast', sans-serif;
+      font-family: 'LoveLight';
       color: white;
       font-size: 70px;
       rotate: -10deg;
       padding-bottom: 20px;
       text-align: left;
-      padding-left: 70px;
       white-space: nowrap;
+
+      > div {
+        width: fit-content;
+        margin: auto;
+      }
     }
     .date {
       font-family: 'MinionPro';

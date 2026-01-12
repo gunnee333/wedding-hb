@@ -16,7 +16,7 @@
 }
 @keyframes rightToLeft {
   from {
-    left: var(--PAGE-WIDTH);
+    left: var(--view-width);
   }
   to {
     left: 0;
@@ -24,7 +24,7 @@
 }
 @keyframes leftToRight {
   from {
-    right: var(--PAGE-WIDTH);
+    right: var(--view-width);
   }
   to {
     right: 0;
@@ -51,7 +51,7 @@
     left: 0;
   }
   to {
-    left: var(--PAGE-WIDTH);
+    left: var(--view-width);
   }
 }
 @keyframes leftToRightClosing {
@@ -59,7 +59,7 @@
     right: 0;
   }
   to {
-    right: var(--PAGE-WIDTH);
+    right: var(--view-width);
   }
 }
 @keyframes popCenter {
@@ -83,11 +83,12 @@
   left: 0;
   right: 0;
   z-index: 100000;
-  width: var(--PAGE-WIDTH);
+  width: var(--view-width);
   height: var(--DEVICE-HEIGHT);
+  margin: auto;
 
   .wrap {
-    width: var(--PAGE-WIDTH);
+    width: var(--view-width);
     height: 100%;
     position: relative;
 
@@ -139,7 +140,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        width: var(--PAGE-WIDTH);
+        width: var(--view-width);
         height: var(--DEVICE-HEIGHT);
       }
       .content {
@@ -149,11 +150,11 @@
         position: absolute;
 
         &.isFull {
-          width: var(--PAGE-WIDTH);
+          width: var(--view-width);
           height: var(--DEVICE-HEIGHT);
         }
         &.isCenter {
-          width: var(--PAGE-WIDTH);
+          width: var(--view-width);
         }
 
         .indicator {
@@ -188,7 +189,7 @@
   position: relative;
 
   .alertModal {
-    width: min(var(--PAGE-WIDTH), 300px);
+    width: min(var(--view-width), 300px);
     background: white;
     display: flex;
     flex-direction: column;
@@ -333,7 +334,7 @@
   position: relative;
 
   .selectModal {
-    width: var(--PAGE-WIDTH);
+    width: var(--view-width);
     background: white;
     display: flex;
     flex-direction: column;

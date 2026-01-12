@@ -175,14 +175,14 @@ export default function Component() {
 
         <div className={styles.row}>
           <div>
-            <span>비밀번호</span>
+            <span>암호</span>
           </div>
           <input
             className={styles.input}
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="삭제용 비밀번호 (4자 이상)"
+            placeholder="삭제용 암호 (4자 이상)"
             maxLength={30}
           />
         </div>

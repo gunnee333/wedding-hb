@@ -77,7 +77,6 @@ textarea,
 button,
 a,
 span {
-  font-family: 'GowunDodum';
   color: inherit;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
@@ -139,4 +138,10 @@ li {
 }
 html {
   -webkit-text-size-adjust: 100%;
+}
+
+input,
+textarea,
+button {
+  font-family: 'GowunDodum';
 }

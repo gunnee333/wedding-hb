@@ -54,7 +54,7 @@ const list2: IItem[] = [
 ];
 
 async function copyText(text: string) {
-  await navigator.clipboard.writeText(text);
+  await window.navigator?.clipboard?.writeText(text);
   alert('계좌번호를 복사했습니다.');
 }
 

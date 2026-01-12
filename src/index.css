@@ -4,14 +4,51 @@
   --background-color: #333333;
   --page-background-color: #fdfafa;
   --page-background-color2: #fbf5f5;
-  --PAGE-WIDTH: min(100vw, --page-width);
+  --view-width: min(100vw, var(--page-width));
   --DEVICE-HEIGHT: 100svh;
   --menu-height: 50px;
 }
 
 html,
 body {
+  font-family: 'GowunDodum';
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
+}
+
+/* =========================
+   Disable zoom & drag/select
+   ========================= */
+
+/* PC/모바일 공통: 텍스트 선택(드래그) 방지 */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* iOS: 길게 눌러 복사/돋보기/콜아웃 방지 */
+body {
+  -webkit-touch-callout: none;
+}
+
+/* 이미지 드래그 방지(PC에서 이미지 끌어오기 방지) */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* 더블탭 확대 억제(일부 모바일 브라우저) */
+* {
+  touch-action: manipulation;
+}
+
+/* 입력 요소는 선택/커서 가능해야 함 */
+input,
+textarea {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  touch-action: auto !important;
 }

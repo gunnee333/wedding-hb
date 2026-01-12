@@ -11,7 +11,7 @@
   .layout {
     display: flex;
     justify-content: space-between;
-    width: min(var(--page-width), 100vw);
+    width: var(--view-width);
     background-color: var(--page-background-color);
     min-height: 100vh;
 

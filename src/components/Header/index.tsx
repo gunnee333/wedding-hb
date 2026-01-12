@@ -12,8 +12,10 @@ export default function Component() {
       </div>
       <div className={styles.txtContainer}>
         <div className={styles.married}>
-          <div>We are</div>
-          <div>getting married</div>
+          <div>
+            <div>We are</div>
+            <div>getting married</div>
+          </div>
         </div>
         <div className={styles.date}>{inviteData.date.en}</div>
         <div className={styles.desc}>

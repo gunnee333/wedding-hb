@@ -17,7 +17,7 @@ async function kakaoShare(text: string) {
   window.navigator.share?.({ url: text });
 }
 async function copyText(text: string) {
-  await navigator.clipboard.writeText(text);
+  await window.navigator?.clipboard?.writeText(text);
   alert('링크를 복사했습니다.');
 }
 

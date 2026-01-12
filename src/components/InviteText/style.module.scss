@@ -35,10 +35,10 @@
 .modal {
   font-family: 'GowunDodum';
   background-color: white;
-  padding: 25px 25px 24px;
   border-radius: 10px;
 
   .list {
+    padding: 25px 25px 24px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
