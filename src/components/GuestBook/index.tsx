@@ -157,42 +157,48 @@ export default function Component() {
           <div>
             <span>이름</span>
           </div>
-          <input
-            className={styles.input}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="이름을 입력해주세요."
-            maxLength={20}
-          />
+          <div>
+            <input
+              className={styles.input}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="이름을 입력해주세요."
+              maxLength={20}
+            />
+          </div>
         </div>
 
         <div className={styles.row}>
           <div>
             <span>내용</span>
           </div>
-          <section>
-            <textarea
-              className={styles.textarea}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="축하 메시지를 남겨주세요. (최대 300자)"
-              maxLength={300}
-            />
-          </section>
+          <div>
+            <section>
+              <textarea
+                className={styles.textarea}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="축하 메시지를 남겨주세요. (최대 300자)"
+                maxLength={300}
+              />
+            </section>
+          </div>
         </div>
 
         <div className={styles.row}>
           <div>
             <span>암호</span>
           </div>
-          <input
-            className={styles.input}
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="삭제용 암호 (4자 이상)"
-            maxLength={30}
-          />
+          <div>
+            <input
+              className={styles.input}
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="삭제용 암호 (4자 이상)"
+              maxLength={30}
+            />
+          </div>
         </div>
 
         {!!error && <div className={styles.errorText}>{error}</div>}
