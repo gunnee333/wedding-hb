@@ -46,7 +46,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #f9f5f5;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #f9f5f5;
       padding: 10px 15px;
       cursor: pointer;
 
@@ -58,9 +60,13 @@
     .toggleDiv {
       max-height: 1000px;
       overflow: hidden;
-      transition: all 0.5s;
+      transition: max-height 0.5s;
     }
     &:not(.active) {
+      > div:nth-child(1) {
+        border-bottom-width: 0px;
+        transition: border-bottom-width 0.5s ease-in;
+      }
       .toggleDiv {
         max-height: 0px;
       }
