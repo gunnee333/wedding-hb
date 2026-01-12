@@ -29,7 +29,7 @@ export default function Component() {
   }, []);
 
   const d = diffParts(targetMs, nowMs);
-  const isBefore = d.diff >= 0;
+  const isBefore = d.days >= 0;
 
   return (
     <>
@@ -120,11 +120,19 @@ export default function Component() {
             <span>Sec</span>
           </div>
         </div>
-        <div className={styles.desc}>
-          {inviteData.wedding.groom.slice(1, 3)} <span>♥</span>{' '}
-          {inviteData.wedding.bride.slice(1, 3)}의 결혼식이{' '}
-          <span>{d.days}</span>일 {isBefore ? '남았습니다.' : '지났습니다.'}
-        </div>
+        {d.days === 0 ? (
+          <div className={styles.desc}>
+            오늘은 {inviteData.wedding.groom.slice(1, 3)} <span>♥</span>{' '}
+            {inviteData.wedding.bride.slice(1, 3)}의 결혼식 <span>당일</span>
+            입니다.
+          </div>
+        ) : (
+          <div className={styles.desc}>
+            {inviteData.wedding.groom.slice(1, 3)} <span>♥</span>{' '}
+            {inviteData.wedding.bride.slice(1, 3)}의 결혼식이{' '}
+            <span>{d.days}</span>일 {isBefore ? '남았습니다.' : '지났습니다.'}
+          </div>
+        )}
       </div>
     </>
   );

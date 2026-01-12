@@ -14,7 +14,7 @@ export function FontSizeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<FontSizeMode>('small');
 
   useEffect(() => {
-    const scale = mode === 'large' ? 1.15 : 1;
+    const scale = mode === 'large' ? 1.2 : 1;
     document.documentElement.style.setProperty('--font-scale', String(scale));
   }, [mode]);
 

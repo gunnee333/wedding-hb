@@ -14,6 +14,7 @@ import { db } from '../../lib/firebase';
 import styles from './style.module.scss';
 import { Svgs } from '../../assets';
 import { inviteData } from '../../data/data';
+import { useFontSize } from '../../context/FontSizeContext';
 
 type CommentDoc = {
   id: string;
@@ -38,13 +39,18 @@ function formatDate(ts: any) {
 }
 
 export default function Component() {
+  const { mode } = useFontSize();
+
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [password, setPassword] = useState('');
 
   const [items, setItems] = useState<CommentDoc[]>([]);
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>();
+
+  console.log('submitting', submitting);
+  console.log('error', error);
 
   const colRef = useMemo(() => collection(db, 'comments'), []);
 
@@ -71,22 +77,20 @@ export default function Component() {
     return () => unsub();
   }, [colRef]);
 
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setError(null);
-
+  async function onSubmit() {
     const n = name.trim();
     const m = message.trim();
     const p = password.trim();
 
     if (!n) return setError('이름을 입력해 주세요.');
-    if (!m) return setError('내용을 입력해 주세요.');
-    if (p.length < 4) return setError('비밀번호는 4자 이상으로 입력해 주세요.');
     if (n.length > 20) return setError('이름은 20자 이내로 입력해 주세요.');
+    if (!m) return setError('축하 메시지를 입력해 주세요.');
     if (m.length > 300) return setError('댓글은 300자 이내로 입력해 주세요.');
+    if (p.length < 4) return setError('비밀번호는 4자 이상으로 입력해 주세요.');
     if (p.length > 30) return setError('비밀번호는 30자 이내로 입력해 주세요.');
 
     try {
+      setError(undefined);
       setSubmitting(true);
       const pwHash = await bcrypt.hash(p, 10);
 
@@ -105,7 +109,7 @@ export default function Component() {
     } finally {
       setSubmitting(false);
     }
-  };
+  }
 
   const requestDelete = async (c: CommentDoc) => {
     if (c.deleted) return;
@@ -136,7 +140,12 @@ export default function Component() {
         <p>따뜻한 마음이 담긴 축하의 글을 남겨주시면</p>
         <p>소중한 추억으로 간직하겠습니다.</p>
       </div>
-      <form className={styles.commentForm} onSubmit={onSubmit}>
+      <div
+        className={[
+          styles.commentForm,
+          mode === 'large' ? styles.large : undefined
+        ].join(' ')}
+      >
         <div className={styles.line}>
           <span></span>
           <span></span>
@@ -187,16 +196,12 @@ export default function Component() {
           />
         </div>
 
-        {error && <div className={styles.errorText}>{error}</div>}
+        {!!error && <div className={styles.errorText}>{error}</div>}
 
-        <button
-          className={styles.btnPrimary}
-          type="submit"
-          disabled={submitting}
-        >
+        <button type="button" onClick={onSubmit}>
           {submitting ? '작성 중...' : '글쓰기'}
         </button>
-      </form>
+      </div>
 
       <div className={styles.commentList}>
         {items.map((c) => (
