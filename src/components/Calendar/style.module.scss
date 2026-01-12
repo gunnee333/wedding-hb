@@ -10,6 +10,7 @@
     font-family: 'JuliusSansOne';
     color: var(--point-color);
     font-size: 0.8rem;
+    font-weight: 700;
   }
 
   .date {
@@ -92,8 +93,8 @@
       padding: 10px;
       text-align: center;
       border-radius: 8px;
-      border: 1px solid #f2eeee;
-      background-color: #faf8f8;
+      background-color: var(--page-background-color);
+      border: 1px solid var(--page-background-color2);
       min-width: 50px;
 
       > span {
