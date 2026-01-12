@@ -14,10 +14,10 @@ export default function Svg() {
         ></path>
       </defs>
       <g>
-        <use xlinkHref="#gentle-wave" x="48" y="0" fill="#ffffff70"></use>
-        <use xlinkHref="#gentle-wave" x="48" y="3" fill="#ffffff50"></use>
-        <use xlinkHref="#gentle-wave" x="48" y="5" fill="#ffffff30"></use>
-        <use xlinkHref="#gentle-wave" x="48" y="7" fill="#ffffff"></use>
+        <use xlinkHref="#gentle-wave" x="48" y="0" fill="#fdfafa70"></use>
+        <use xlinkHref="#gentle-wave" x="48" y="3" fill="#fdfafa50"></use>
+        <use xlinkHref="#gentle-wave" x="48" y="5" fill="#fdfafa30"></use>
+        <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fdfafa"></use>
       </g>
     </svg>
   );
