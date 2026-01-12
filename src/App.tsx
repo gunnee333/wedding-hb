@@ -6,7 +6,8 @@ import {
   GuestBook,
   InviteText,
   Location,
-  Menu
+  Menu,
+  FontSizeToggle
 } from './components';
 import styles from './layout.module.scss';
 
@@ -22,7 +23,8 @@ export default function App() {
           <Location />
           <Account />
           <GuestBook />
-          <div className={styles.bottom}></div>
+          <div className={styles.bottom} />
+          <FontSizeToggle />
           <Menu />
         </div>
       </div>

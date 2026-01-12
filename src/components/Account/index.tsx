@@ -136,7 +136,11 @@ function ToggleItem({ item }: { item: IItem }) {
       </div>
       <div>
         {item.kakaoPay ? (
-          <button type="button" className={styles.kakaoBtn}>
+          <button
+            type="button"
+            className={styles.kakaoBtn}
+            onClick={() => window.open(item.kakaoPay)}
+          >
             <img src={Images.kakaopay} />
           </button>
         ) : undefined}

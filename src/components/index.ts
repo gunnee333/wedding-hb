@@ -6,3 +6,4 @@ export { default as GuestBook } from './GuestBook';
 export { default as InviteText } from './InviteText';
 export { default as Location } from './Location';
 export { default as Menu } from './Menu';
+export { default as FontSizeToggle } from './FontSizeToggle';

@@ -9,7 +9,7 @@
   .title {
     font-family: 'JuliusSansOne';
     color: var(--point-color);
-    font-size: 12.8px;
+    font-size: 0.8rem;
   }
 
   .subTitle {
@@ -69,7 +69,7 @@
 
       > div {
         width: 70px;
-        font-size: 15px;
+        font-size: 0.8rem;
         height: 100%;
 
         > span {
@@ -102,7 +102,7 @@
         flex: 1;
         border: none;
         padding: 10px 12px;
-        font-size: 14px;
+        font-size: 0.8rem;
         font-family: 'GowunDodum';
         background-color: unset;
       }
@@ -111,7 +111,7 @@
         font-family: 'GowunDodum';
         flex: 1;
         border: none;
-        font-size: 14px;
+        font-size: 0.8rem;
         line-height: 190%;
         height: 100px;
         resize: none;
@@ -160,7 +160,7 @@
       }
 
       .commentDate {
-        font-size: 11px;
+        font-size: 0.7rem;
         color: rgba(26, 26, 34, 0.45);
         letter-spacing: -0.1px;
       }
@@ -182,7 +182,7 @@
           border-radius: 10px;
           padding: 6px 10px;
           cursor: pointer;
-          font-size: 12px;
+          font-size: 0.7rem;
         }
       }
     }

@@ -8,18 +8,16 @@
 
   .title {
     font-family: 'JuliusSansOne';
-    font-size: 12.8px;
+    font-size: 0.8rem;
     color: var(--point-color);
   }
 
   .subTitle {
     font-family: 'GowunDodum';
-    font-size: 16px;
   }
 
   .names {
     font-family: 'GowunDodum';
-    font-size: 16px;
   }
 
   button {
@@ -52,9 +50,6 @@
       align-items: center;
       justify-content: center;
 
-      .title {
-        font-size: 16px;
-      }
       .name {
         font-weight: 600;
       }

@@ -14,3 +14,4 @@ export { default as share } from './Share';
 export { default as sound } from './Sound';
 export { default as qrcode } from './QrCode';
 export { default as kakao } from './Kakao';
+export { default as text } from './Text';
