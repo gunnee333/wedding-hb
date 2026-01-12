@@ -31,7 +31,7 @@
     font-family: 'GowunDodum';
     background-color: white;
     width: 100%;
-    border: 1px solid #f9f5f5;
+    border: 1px solid var(--point-color2);
     border-radius: 6px;
 
     &.active {
@@ -48,7 +48,7 @@
       justify-content: space-between;
       border-bottom-width: 1px;
       border-bottom-style: solid;
-      border-bottom-color: #f9f5f5;
+      border-bottom-color: var(--point-color2);
       padding: 10px 15px;
       cursor: pointer;
 
@@ -80,7 +80,7 @@
       padding: 10px 15px;
 
       &:not(:last-child) {
-        border-bottom: 1px dashed #f9f5f5;
+        border-bottom: 1px dashed var(--point-color2);
       }
 
       > div:nth-child(1) {
@@ -101,8 +101,8 @@
 
         .copyBtn {
           display: flex;
-          background-color: #fdfafa;
-          border: 1px solid #f9f5f5;
+          background-color: var(--page-background-color);
+          border: 1px solid var(--point-color2);
           border-radius: 4px;
           padding: 4px 6px;
           gap: 6px;

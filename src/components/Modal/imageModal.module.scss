@@ -10,7 +10,7 @@
 
   .modal {
     width: var(--view-width);
-    background: #fff;
+    background: white;
     overflow: hidden;
   }
 
@@ -19,13 +19,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray-color2);
   }
   .modalIndex {
     position: absolute;
     top: 0;
     left: 0;
-    color: #ffffff;
+    color: white;
     padding: 15px 20px;
   }
   .iconBtn {
@@ -56,7 +56,7 @@
     }
   }
   .modalBody {
-    background: #000;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -50,7 +50,7 @@
 
       > span {
         width: 100%;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--gray-color2);
         height: 45px;
 
         &:nth-child(3),
@@ -79,10 +79,10 @@
 
           &::after {
             content: '';
-            border-right: 1px solid #eee;
+            border-right: 1px solid var(--gray-color2);
             width: 1px;
             height: 10px;
-            background-color: #eee;
+            background-color: var(--gray-color2);
           }
         }
       }
@@ -152,7 +152,7 @@
       font-size: 0.8rem;
       letter-spacing: -0.2px;
       transition: transform 120ms ease, filter 120ms ease, opacity 120ms ease;
-      border: 1px solid #f9f5f5;
+      border: 1px solid var(--point-color2);
       background-color: var(--page-background-color);
     }
   }
@@ -165,7 +165,7 @@
     width: 100%;
 
     .commentItem {
-      border: 1px solid #eee;
+      border: 1px solid var(--gray-color2);
       border-radius: 12px;
       padding: 12px;
       background-color: var(--page-background-color);
@@ -190,7 +190,7 @@
         margin-top: 6px;
         white-space: pre-wrap;
         word-break: break-word;
-        color: #222;
+        color: var(--gray-color3);
       }
 
       .delBtn {
@@ -199,7 +199,7 @@
 
         button {
           border: 1px solid #ddd;
-          background: #fff;
+          background: white;
           border-radius: 10px;
           padding: 6px 10px;
           cursor: pointer;

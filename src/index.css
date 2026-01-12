@@ -1,7 +1,11 @@
 :root {
-  --point-color: #dab1b6;
   --page-width: 440px;
   --background-color: #333333;
+  --gray-color1: #cccccc;
+  --gray-color2: #eeeeee;
+  --gray-color3: #222222;
+  --point-color: #dab1b6;
+  --point-color2: #f9f5f5;
   --page-background-color: #fdfafa;
   --page-background-color2: #fbf5f5;
   --view-width: min(100vw, var(--page-width));

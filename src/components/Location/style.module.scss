@@ -64,7 +64,7 @@
       justify-content: space-around;
       gap: 8px;
       background-color: white;
-      border: 1px solid #f9f5f5;
+      border: 1px solid var(--point-color2);
       border-radius: 4px;
       padding: 10px 6px;
       font-family: 'GowunDodum';
@@ -87,12 +87,12 @@
         flex: none;
         width: 1px;
         height: 12px;
-        background-color: #f9f5f5;
+        background-color: var(--point-color2);
       }
     }
     .mapImg {
       border-radius: 4px;
-      border: 1px solid #f9f5f5;
+      border: 1px solid var(--point-color2);
     }
   }
 
