@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import bcrypt from 'bcryptjs';
 import {
   addDoc,
@@ -12,7 +12,6 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import styles from './style.module.scss';
-import { Svgs } from '../../assets';
 import { inviteData } from '../../data/data';
 import { useFontSize } from '../../context/FontSizeContext';
 
@@ -32,8 +31,8 @@ function formatDate(ts: any) {
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, '0');
   const dd = String(d.getDate()).padStart(2, '0');
-  const hh = String(d.getHours()).padStart(2, '0');
-  const min = String(d.getMinutes()).padStart(2, '0');
+  // const hh = String(d.getHours()).padStart(2, '0');
+  // const min = String(d.getMinutes()).padStart(2, '0');
 
   return `${yyyy}.${mm}.${dd}`;
 }
@@ -133,7 +132,7 @@ export default function Component() {
   return (
     <div className={styles.container} id={inviteData.elementId.guestbook}>
       <div className={styles.title}>GUEST BOOK</div>
-      <div className={styles.subTitle}>방명록</div>
+      <div>방명록</div>
       <div className={styles.division} />
       <div className={styles.commentsDesc}>
         <p>따뜻한 마음이 담긴 축하의 글을 남겨주시면</p>

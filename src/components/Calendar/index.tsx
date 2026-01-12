@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Svgs } from '../../assets';
 import styles from './style.module.scss';
 import { inviteData } from '../../data/data';
 import moment from 'moment';
 
-function diffParts(targetMs: number, nowMs: number) {
+function diffParts(nowMs: number) {
+  const targetMs = new Date(inviteData.date.dateISO).getTime();
+
   const diffDays = moment(targetMs)
     .startOf('days')
     .diff(moment(nowMs).startOf('days'), 'days');
@@ -21,10 +23,6 @@ function diffParts(targetMs: number, nowMs: number) {
 }
 
 export default function Component() {
-  const targetMs = useMemo(
-    () => new Date(inviteData.date.dateISO).getTime(),
-    [inviteData.date.dateISO]
-  );
   const [nowMs, setNowMs] = useState(() => Date.now());
 
   useEffect(() => {
@@ -32,7 +30,7 @@ export default function Component() {
     return () => window.clearInterval(t);
   }, []);
 
-  const d = diffParts(targetMs, nowMs);
+  const d = diffParts(nowMs);
   const isBefore = d.diffDays > 0;
 
   return (

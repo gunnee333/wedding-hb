@@ -6,12 +6,12 @@ import { Svgs } from '../../assets';
 
 const telNumList: { title: string; name: string; tel: string }[] = [
   {
-    title: '신랑',
+    title: `🤵🏻\n신랑`,
     name: inviteData.wedding.groomData.name,
     tel: inviteData.wedding.groomData.phone
   },
   {
-    title: '신부',
+    title: `👰🏻‍♀️\n신부`,
     name: inviteData.wedding.brideData.name,
     tel: inviteData.wedding.brideData.phone
   },
@@ -44,7 +44,7 @@ export default function Component() {
     <>
       <div className={styles.container} id={inviteData.elementId.inviteText}>
         <div className={styles.title}>INVITE YOU</div>
-        <div className={styles.subTitle}>
+        <div>
           <p>저희 두 사람이</p>
           <p>평생을 함께하기 위해</p>
           <p>서로의 반려자가 되려 합니다.</p>

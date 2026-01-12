@@ -52,7 +52,7 @@ export default function Component() {
   return (
     <div className={styles.container} id={inviteData.elementId.location}>
       <div className={styles.title}>Location</div>
-      <div className={styles.subTitle}>오시는 길</div>
+      <div>오시는 길</div>
       <div className={styles.division} />
       <div className={styles.desc}>
         {inviteData.place.address}

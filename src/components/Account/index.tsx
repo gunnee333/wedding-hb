@@ -66,7 +66,7 @@ export default function Component() {
     <>
       <div className={styles.container} id={inviteData.elementId.account}>
         <div className={styles.title}>ACCOUNT</div>
-        <div className={styles.subTitle}>마음 전하실 곳</div>
+        <div>마음 전하실 곳</div>
         <div className={styles.division} />
         <div className={styles.desc}>
           참석이 어려워 직접 축하를 전하지 못하는

@@ -13,16 +13,7 @@
     font-weight: 700;
   }
 
-  .subTitle {
-    font-family: 'GowunDodum';
-  }
-
-  .names {
-    font-family: 'GowunDodum';
-  }
-
   button {
-    font-family: 'GowunDodum';
     padding: 15px;
     background-color: white;
     border: 1px solid #dbdbdb;
@@ -32,7 +23,6 @@
 }
 
 .modal {
-  font-family: 'GowunDodum';
   background-color: white;
   border-radius: 10px;
 
@@ -50,6 +40,11 @@
       width: 50%;
       align-items: center;
       justify-content: center;
+
+      .title {
+        white-space: pre-wrap;
+        text-align: center;
+      }
 
       .name {
         font-weight: 600;
