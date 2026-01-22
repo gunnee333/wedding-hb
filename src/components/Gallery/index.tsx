@@ -52,6 +52,8 @@ images.forEach((item, index) => {
   }
 });
 
+const photos = [...section1, ...section2, ...section3, ...section4];
+
 export default function Component() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -68,7 +70,7 @@ export default function Component() {
                   className={styles.item}
                   onClick={() => setOpenIndex(item.index)}
                 >
-                  <img src={item.url} />
+                  <img src={item.url} alt={`사진 ${item.index}`} />
                 </div>
               ))}
             </div>
@@ -79,7 +81,7 @@ export default function Component() {
                   className={styles.item}
                   onClick={() => setOpenIndex(item.index)}
                 >
-                  <img src={item.url} />
+                  <img src={item.url} alt={`사진 ${item.index}`} />
                 </div>
               ))}
             </div>
@@ -90,7 +92,7 @@ export default function Component() {
                   className={styles.item}
                   onClick={() => setOpenIndex(item.index)}
                 >
-                  <img src={item.url} />
+                  <img src={item.url} alt={`사진 ${item.index}`} />
                 </div>
               ))}
             </div>
@@ -101,7 +103,7 @@ export default function Component() {
                   className={styles.item}
                   onClick={() => setOpenIndex(item.index)}
                 >
-                  <img src={item.url} />
+                  <img src={item.url} alt={`사진 ${item.index}`} />
                 </div>
               ))}
             </div>
@@ -111,17 +113,9 @@ export default function Component() {
       </div>
       {openIndex !== null && (
         <ImageModal
-          photos={images}
+          photos={photos}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
-          onPrev={() =>
-            setOpenIndex((v) =>
-              v === null ? 0 : (v - 1 + images.length) % images.length
-            )
-          }
-          onNext={() =>
-            setOpenIndex((v) => (v === null ? 0 : (v + 1) % images.length))
-          }
         />
       )}
     </>

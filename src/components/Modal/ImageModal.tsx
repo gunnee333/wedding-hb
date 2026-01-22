@@ -1,17 +1,35 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './imageModal.module.scss';
 import { Svgs } from '../../assets';
+import SwiperCore from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 type Props = {
-  photos: string[];
+  photos: { url: string; index: number }[];
   index: number;
   onClose: () => void;
-  onPrev: () => void;
-  onNext: () => void;
 };
 
-export function ImageModal({ photos, index, onClose, onPrev, onNext }: Props) {
-  const src = photos[index];
+export function ImageModal({ photos, index, onClose }: Props) {
+  const [currentIndex, setCurrentIndex] = useState(index);
+  const swiperRef = useRef<SwiperCore | null>(null);
+
+  function onPrev() {
+    swiperRef.current?.slideTo(currentIndex - 1, 0);
+  }
+
+  function onNext() {
+    swiperRef.current?.slideTo(currentIndex + 1, 0);
+  }
+
+  useEffect(() => {
+    setCurrentIndex(index);
+    if (index) {
+      swiperRef.current?.slideTo(index, 0);
+    }
+  }, [index]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -32,11 +50,24 @@ export function ImageModal({ photos, index, onClose, onPrev, onNext }: Props) {
     >
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalBody}>
-          <img
-            className={styles.modalImg}
-            src={src}
-            alt={`확대 사진 ${index + 1}`}
-          />
+          <Swiper
+            className={styles.swiper}
+            spaceBetween={0}
+            slidesPerView="auto"
+            threshold={10}
+            centeredSlides={true}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              swiper.slideTo(currentIndex, 0);
+            }}
+            onSlideChange={(e) => setCurrentIndex(e.activeIndex)}
+          >
+            {photos.map(({ url, index: i }) => (
+              <SwiperSlide key={i} className={styles.modalImg}>
+                <img src={url} alt={`확대 사진 ${i + 1}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <button
@@ -55,7 +86,7 @@ export function ImageModal({ photos, index, onClose, onPrev, onNext }: Props) {
           <Svgs.arrow fill="#ffffff" />
         </button>
         <div className={styles.modalIndex}>
-          {index + 1} / {photos.length}
+          {currentIndex + 1} / {photos.length}
         </div>
         <button className={styles.closeBtn} onClick={onClose} aria-label="닫기">
           <Svgs.close />
