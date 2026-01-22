@@ -21,11 +21,21 @@ export const inviteData = {
       phone: '01062077029',
       account: '3521260744653',
       bank: '농협',
-      kakaoPay: ''
+      kakaoPay: 'https://qr.kakaopay.com/FIPQR4HGf'
     },
     groomParents: [
-      { name: '권혁규', phone: '01033577819', account: '', bank: '' },
-      { name: '김기자', phone: '01071447819', account: '', bank: '' }
+      {
+        name: '권혁규',
+        phone: '01033577819',
+        account: '2318100163750',
+        bank: '새마을금고'
+      },
+      {
+        name: '김기자',
+        phone: '01071447819',
+        account: '9003238656399',
+        bank: '새마을금고'
+      }
     ],
     brideData: {
       name: '이혜빈',
@@ -39,7 +49,7 @@ export const inviteData = {
       {
         name: '이완수',
         phone: '01037650241',
-        account: '24102756',
+        account: '24102752081563',
         bank: '농협'
       },
       {

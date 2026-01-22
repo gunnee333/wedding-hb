@@ -313,7 +313,7 @@ export default function Component() {
               <li>
                 <p>
                   <span>● </span>
-                  <strong>하이파킹 주차장</strong>
+                  <strong>하이파킹 주차장(상동국천빌딩)</strong>
                 </p>
               </li>
               <li>
