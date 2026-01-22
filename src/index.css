@@ -22,6 +22,7 @@ body {
   margin: 0;
   background-color: var(--background-color);
   max-width: 100%;
+  touch-action: manipulation;
 }
 
 /* =========================

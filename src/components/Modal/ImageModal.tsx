@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import styles from './imageModal.module.scss';
 import { Svgs } from '../../assets';
 
@@ -33,20 +32,11 @@ export function ImageModal({ photos, index, onClose, onPrev, onNext }: Props) {
     >
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalBody}>
-          <TransformWrapper
-            doubleClick={{ mode: 'toggle' }}
-            pinch={{ step: 5 }}
-            wheel={{ disabled: true }}
-            panning={{ velocityDisabled: true }}
-          >
-            <TransformComponent>
-              <img
-                className={styles.modalImg}
-                src={src}
-                alt={`확대 사진 ${index + 1}`}
-              />
-            </TransformComponent>
-          </TransformWrapper>
+          <img
+            className={styles.modalImg}
+            src={src}
+            alt={`확대 사진 ${index + 1}`}
+          />
         </div>
 
         <button
