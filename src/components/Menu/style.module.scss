@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999999999;
+  z-index: 4999;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -96,11 +96,11 @@
   left: 0;
   right: 0;
   transition: bottom 0.5s;
-  background-color: #ffffffcc;
+  background-color: #ffffffdd;
   width: var(--view-width);
   margin: auto;
   padding: 20px 0 var(--menu-height);
-  z-index: 999999998;
+  z-index: 4998;
 
   &.active {
     bottom: 0svh;

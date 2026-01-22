@@ -12,6 +12,7 @@
     width: 100%;
     max-width: var(--page-width);
     overflow: hidden;
+    max-height: 100svh;
   }
 
   .modalTop {
@@ -35,6 +36,8 @@
     cursor: pointer;
     background-color: unset;
     border: none;
+    z-index: 5000;
+    border-radius: 100%;
 
     svg {
       width: 30px;
@@ -60,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 70px;
 
     .swiper {
       :global(.swiper-wrapper) {
@@ -74,7 +78,9 @@
 
         img {
           width: 100%;
+          max-width: 100vw;
           height: auto;
+          max-height: calc(100svh - 70px);
           object-fit: contain;
           display: block;
         }
