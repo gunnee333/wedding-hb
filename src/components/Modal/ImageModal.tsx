@@ -17,11 +17,19 @@ export function ImageModal({ photos, index, onClose }: Props) {
   const swiperRef = useRef<SwiperCore | null>(null);
 
   function onPrev() {
-    swiperRef.current?.slideTo(currentIndex - 1, 0);
+    if (currentIndex > 0) {
+      swiperRef.current?.slideTo(currentIndex - 1, 0);
+    } else {
+      swiperRef.current?.slideTo(photos.length - 1, 0);
+    }
   }
 
   function onNext() {
-    swiperRef.current?.slideTo(currentIndex + 1, 0);
+    if (currentIndex < photos.length - 1) {
+      swiperRef.current?.slideTo(currentIndex + 1, 0);
+    } else {
+      swiperRef.current?.slideTo(0, 0);
+    }
   }
 
   useEffect(() => {
@@ -90,7 +98,6 @@ export function ImageModal({ photos, index, onClose }: Props) {
           >
             <Svgs.arrow fill="#ffffff" />
           </button>
-
           <button
             className={[styles.iconBtn, styles.next].join(' ')}
             onClick={onNext}
