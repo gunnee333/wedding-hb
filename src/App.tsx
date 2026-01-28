@@ -21,7 +21,7 @@ export default function App() {
           <Calendar />
           <Gallery />
           <Location />
-          <Account />
+          {/* <Account /> */}
           <GuestBook />
           <div className={styles.bottom} />
           <FontSizeToggle />
