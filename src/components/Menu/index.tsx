@@ -9,7 +9,7 @@ const menuList: { id: string; title: string }[] = [
   { id: inviteData.elementId.inviteText, title: '연락하기' },
   { id: inviteData.elementId.gallery, title: '갤러리' },
   { id: inviteData.elementId.location, title: '오시는 길' },
-  { id: inviteData.elementId.account, title: '마음 전하실 곳' },
+  // { id: inviteData.elementId.account, title: '마음 전하실 곳' },
   { id: inviteData.elementId.guestbook, title: '방명록' }
 ];
 
