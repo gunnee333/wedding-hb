@@ -68,7 +68,7 @@ export default function Component() {
         <div className={styles.title}>ACCOUNT</div>
         <div>마음 전하실 곳</div>
         <div className={styles.division} />
-        <div className={styles.desc}>
+        {/* <div className={styles.desc}>
           참석이 어려워 직접 축하를 전하지 못하는
           <br />
           분들을 위해 계좌번호를 기재하였습니다.
@@ -78,7 +78,7 @@ export default function Component() {
           전해주시는 진심은 소중하게 간직하여
           <br />
           좋은 부부의 모습으로 보답하겠습니다.
-        </div>
+        </div> */}
         <div
           className={[
             styles.toggle,
